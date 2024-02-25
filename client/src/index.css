@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --tw-gradient-stops: var(--tw-gradient-stops, #{
+      'rgba(107, 114, 128, 1)',
+      'rgba(107, 114, 128, 0)'
+    });
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  body.dark {
+    @apply bg-gray-800 text-white;
+  }
+}
