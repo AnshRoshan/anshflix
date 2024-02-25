@@ -1,8 +1,7 @@
 import axios from 'axios'
 import queryString from 'query-string'
 
-// const baseURL = "https://anshflix.vercel.app/api/v1/";
-const baseURL = 'http://localhost:5000/api/v1/'
+const baseURL = 'https://cineflix-dids.onrender.com/api/v1/'
 
 const privateClient = axios.create({
   baseURL,
