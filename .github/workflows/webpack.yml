@@ -25,12 +25,13 @@ jobs:
         with:
           version: 7
 
+      - name: Navigate to client folder
+        run: cd client
+
       - run: |
           pnpm install --no-frozen-lockfile
           pnpm install
-
-      - run: pnpm run build
-
+          
       - name: Build
         run: pnpm run build
 
@@ -43,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './client/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
