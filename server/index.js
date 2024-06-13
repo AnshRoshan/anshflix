@@ -1,6 +1,6 @@
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
-import 'dotenv/config'
+// import 'dotenv/config'
 import express from 'express'
 import http from 'http'
 import mongoose from 'mongoose'
@@ -33,7 +33,7 @@ mongoose
       console.log(`Server is listening on port ${port}`)
     })
   })
-  .catch(err => {
+  .catch((err) => {
     console.log({ err })
     process.exit(1)
   })
