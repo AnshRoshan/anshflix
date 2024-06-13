@@ -1,13 +1,13 @@
 {
-  "name": "chalchitra-backend",
+  "name": "anshflix-backend",
   "type": "module",
   "version": "0.0.1",
   "author": "Ansh Roshan",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node --env-file=.env --env-file=.env.local index.js",
+    "dev": "node --watch --env-file=.env --env-file=.env.local index.js "
   },
   "dependencies": {
     "axios": "^1.6.7",

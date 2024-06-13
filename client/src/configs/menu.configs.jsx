@@ -60,25 +60,25 @@ const user = [
 const footer = [
   {
     display: 'about',
-    path: 'http://cosmicportfolio.vercel.app',
+    path: 'https://anshroshan.vercel.app/about',
     icon: <GitHubIcon />,
     state: 'about',
   },
   {
     display: 'projects',
-    path: 'http://cosmicportfolio.vercel.app',
+    path: 'https://anshroshan.vercel.app/projects',
     icon: <AccountTreeIcon />,
     state: 'projects',
   },
   {
-    display: 'contact',
-    path: 'http://cosmicportfolio.vercel.app',
+    display: 'blog',
+    path: 'https://anshroshan.vercel.app/blog',
     icon: <AccountCircleIcon />,
     state: 'contact',
   },
   {
     display: 'resume',
-    path: 'http://cosmicportfolio.vercel.app',
+    path: 'https://anshroshan.vercel.app/',
     icon: <ArticleIcon />,
     state: 'resume',
   },
