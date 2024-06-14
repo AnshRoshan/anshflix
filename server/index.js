@@ -1,11 +1,13 @@
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
-// import 'dotenv/config'
 import express from 'express'
 import http from 'http'
 import mongoose from 'mongoose'
 import routes from './src/routes/index.js'
+import dotenv from 'dotenv'
 
+// Configure dotenv to load the .env.local file
+dotenv.config({ path: '.env.local' })
 const app = express()
 
 app.use(cors())
@@ -15,6 +17,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app.use('/api/v1', routes)
+
+console.log('hello from the server')
 
 //log a meesage for get  /api/v1 request
 app.get('/api/v1', (req, res) => {
