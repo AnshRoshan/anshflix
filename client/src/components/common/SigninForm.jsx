@@ -22,11 +22,16 @@ const SigninForm = ({ switchAuthState }) => {
     },
     validationSchema: Yup.object({
       username: Yup.string()
+        .alphanumeric("username must be alphanumeric")
         .min(8, "username minimum 8 characters")
         .required("username is required"),
       password: Yup.string()
         .min(8, "password minimum 8 characters")
         .required("password is required")
+        .matches(/[0-9]/, 'Password must contain at least one number')
+        .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least one special character')
+        .matches(/[a-z]/, 'Password must contain at least one lowercase letter')
+        .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
     }),
     onSubmit: async values => {
       setErrorMessage(undefined);
